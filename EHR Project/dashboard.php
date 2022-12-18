@@ -19,6 +19,7 @@ function pdo_connect_mysql() {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5">
     <title>ECRI_CARE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -32,65 +33,32 @@ function pdo_connect_mysql() {
         <div class="sidebar">
             <div class="profile">
                 <img src="images/Picture1.png" alt="profile picture">
-                <h3>JOHNSON</h3>
-                <P>Doctor</P>
+                <h3 class="fw-bold">JOHNSON</h3>
+                <P class="fw-bold">Doctor</P>
             </div>
-                <ul >
-                    <li>
-                        <a href="#" class="active">
-                            <span class="icon"><i class="fas fa-home"></i></span>
-                            <span class="item">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><i class="fas fa-desktop"></i></span>
-                            <span class="item">Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#container">
-                            <span class="icon"><i class="fas fa-user-friends"></i></span>
-                            <span class="item">All Patients</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
-                            <span class="item">Perfomance</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><i class="fas fa-database"></i></span>
-                            <span class="item">Development</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><i class="fas fa-chart-line"></i></span>
-                            <span class="item">Reports</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><i class="fas fa-user-shield"></i></span>
-                            <span class="item">Admin</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><i class="fas fa-cog"></i></span>
-                            <span class="item">Settings</span>
-                        </a>
-                    </li>
-                </ul>
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-gauge"></i>&ensp;Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-house-user"></i>&ensp;Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-people-group"></i>&ensp;About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-hospital-user"></i>&ensp;Patients</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i>&ensp;Settings</a>
+                </li>
+            </ul>
         </div>
         
         <div class="section">
             <nav class="navbar navbar-dark bg-mynav">
                 <div class="container-fluid justify-content-between">
-                    <a class="navbar-brand" href="#">ECRI<i class="fa-solid fa-heart-pulse"></i>CARE</a>
+                    <a class="navbar-brand fw-bold" href="#">ECRI<i class="fa-solid fa-heart-pulse"></i>CARE</a>
                     <a class="btn btn-primary" href="#" role="button"><i class="fa-solid fa-right-from-bracket"></i>&ensp;Logout</a>
                 </div>
             </nav>
@@ -101,7 +69,7 @@ function pdo_connect_mysql() {
                         <div class="table-title">
 		        		    <div class="d-grid gap-2 d-md-flex bg-primary justify-content-between">
                                 <h2 class="text-white">All <b>Patients</b></h2>
-                                <a href="#addpatient" class="btn btn-success " data-toggle="modal"><i class="fa-solid fa-user-plus"></i>&ensp; <span>Add New Patient</span></a>
+                                <a href="#addpatient" class="btn btn-success me-md-2 fw-bold" data-toggle="modal"><i class="fa-solid fa-user-plus"></i>&ensp; <span>New Patient</span></a>
                             </div>
                         </div>
 	            		<table class="table table-striped table-hover">
@@ -133,8 +101,8 @@ function pdo_connect_mysql() {
 		        				<td>Woching 3, Pfarrkirchen, Germany</td>
 		        				<td>+4910000000000</td>
 		        				<td>
-		        					<a href="#editpatient" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-		        					<a href="#deletepatient" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+		        					<a href="#editpatient" class="edit" data-toggle="modal"><i class="fa-solid fa-user-pen" data-toggle="tooltip" title="Edit"></i></a>&ensp;
+		        					<a href="#deletepatient" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
 		        				</td>
 		        			</tr>
 		        			<tr>
@@ -149,8 +117,8 @@ function pdo_connect_mysql() {
 		        				<td>Posmunster 1, Munich, Germany</td>
 		        				<td>+4910000000001</td>
 		        				<td>
-		        					<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-		        					<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+		        					<a href="#editpatient" class="edit" data-toggle="modal"><i class="fa-solid fa-user-pen" data-toggle="tooltip" title="Edit"></i></a>&ensp;
+		        					<a href="#deletepatient" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
 		        				</td>
 		        			</tr>
 		        			<tr>
@@ -165,8 +133,8 @@ function pdo_connect_mysql() {
 		        				<td>Allach 1, Limburg, Germany</td>
 		        				<td>+49100000000002</td>
 		        				<td>
-		        					<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-		        					<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+		        					<a href="#editpatient" class="edit" data-toggle="modal"><i class="fa-solid fa-user-pen" data-toggle="tooltip" title="Edit"></i></a>&ensp;
+		        					<a href="#deletepatient" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
 		        				</td>
 		        			</tr>
 		        			<tr>
@@ -181,8 +149,8 @@ function pdo_connect_mysql() {
 		        				<td>Posmunster 25, Bavaria, Germany</td>
 		        				<td>+49100000000003</td>
 		        				<td>
-		        					<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-		        					<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+		        					<a href="#editpatient" class="edit" data-toggle="modal"><i class="fa-solid fa-user-pen" data-toggle="tooltip" title="Edit"></i></a>&ensp;
+		        					<a href="#deletepatient" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
 		        				</td>
 		        			</tr>					
 		        		</tbody>
@@ -194,35 +162,61 @@ function pdo_connect_mysql() {
         </div>
 
 
-<!-- Edit Modal HTML -->
+<!-- New Patient -->
 <div id="addpatient" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<form>
 				<div class="modal-header">						
-					<h4 class="modal-title">Add Patient</h4>
+					<h4 class="modal-title fw-bold">Add Patient</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">					
-					<div class="form-group">
+					<div class="form-group fw-bold">
 						<label>Name</label>
 						<input type="text" class="form-control" required>
 					</div>
-					<div class="form-group">
+					<div class="form-group fw-bold">
 						<label>Email</label>
 						<input type="email" class="form-control" required>
 					</div>
-					<div class="form-group">
+					<div class="form-group fw-bold">
 						<label>Address</label>
 						<textarea class="form-control" required></textarea>
 					</div>
-					<div class="form-group">
+                    <br>
+                    <p class="fw-bold">Do you have Insurance?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                        <label class="form-check-label" for="flexCheckDefault">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                        <label class="form-check-label" for="flexCheckDefault">No</label>
+                    </div>
+                    <br>
+					<div class="form-group fw-bold">
 						<label>Phone</label>
 						<input type="text" class="form-control" required>
-					</div>					
+					</div>		
+                    <br>
+
+                    <p class="fw-bold">Gender</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                    Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                    Female
+                        </label>
+                    </div>
 				</div>
 				<div class="modal-footer">
-					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+					<input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancel">
 					<input type="submit" class="btn btn-success" value="Add">
 				</div>
 			</form>
@@ -241,25 +235,53 @@ function pdo_connect_mysql() {
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">					
-					<div class="form-group">
+					<div class="form-group fw-bold">
 						<label>Name</label>
 						<input type="text" class="form-control" required>
 					</div>
-					<div class="form-group">
+					<div class="form-group fw-bold">
 						<label>Email</label>
 						<input type="email" class="form-control" required>
 					</div>
-					<div class="form-group">
+					<div class="form-group fw-bold">
 						<label>Address</label>
 						<textarea class="form-control" required></textarea>
 					</div>
-					<div class="form-group">
+                    <br>
+                    <p class="fw-bold">Do you have Insurance?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                        <label class="form-check-label" for="flexCheckDefault">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                        <label class="form-check-label" for="flexCheckDefault">No</label>
+                    </div>
+                    <br>
+					<div class="form-group fw-bold">
 						<label>Phone</label>
 						<input type="text" class="form-control" required>
-					</div>					
+					</div>		
+                    <br>
+                    <p>Date: <input type="text" id="datepicker"></p>
+                    <br>
+
+                    <p class="fw-bold">Gender</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                    Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                    Female
+                        </label>
+                    </div>
 				</div>
 				<div class="modal-footer">
-					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+					<input type="button" class="btn btn-danger data-dismiss="modal" value="Cancel">
 					<input type="submit" class="btn btn-info" value="Save">
 				</div>
 			</form>
